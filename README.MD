@@ -2,6 +2,9 @@
 
 This repository contains a Python implementation of the Random Sample Consensus (RANSAC) algorithm, designed specifically for linear model fitting. The RANSAC algorithm is a robust method used to fit mathematical models from data sets that may contain outliers.
 
+![RANSAC results showing fitted line with inliers and outliers](results/ransac_results.jpg)
+
+
 ## Features
 
 - **Robust Linear Fitting**: Implements the RANSAC algorithm to robustly fit lines to noisy data with outliers.

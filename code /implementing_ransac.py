@@ -20,7 +20,7 @@ comb_data_x = np.concatenate((data_x, outliers_x))
 input_data = np.stack((comb_data_x, comb_data_y), axis=1)
 
 # Run RANSAC algorithm to find the best-fit model
-bestFit, bestData = ransac(input_data=input_data, iterations=20, temp_points=10, thres=0.4, min_good_points=int(0.8 * n_size))
+bestFit, bestData = ransac(input_data=input_data, iterations=20, temp_points=10, thres=0.5, min_good_points=int(0.8 * n_size))
 
 # Plotting the results
 fig, ax = plt.subplots(ncols=2)
@@ -33,5 +33,6 @@ ax[0].set(title="Original Data")
 if bestData is not None:
     ax[1].scatter(bestData[:, 0], bestData[:, 1], c="red", label="Inliers")
     ax[1].set(title="Filtered Data")
+
 
 plt.show()
